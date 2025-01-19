@@ -19,7 +19,7 @@
           <span v-if="!instance.maintainer">Anonymous</span>
         </td>
         <td>
-          <img loading="lazy" :src="`https://img.shields.io/website.svg?label=&url=${encodeURIComponent(`${instance.url}/test/cache`)}`" />
+          <img loading="lazy" :src="`https://img.shields.io/website.svg?label=&url=${encodeURIComponent(`${instance.url}/healthz`)}`" />
         </td>
       </tr>
     </tbody>
@@ -33,50 +33,20 @@ const instances = [{
     maintainer: 'Stille',
     maintainerUrl: 'https://www.ioiox.com',
   }, {
-    url: 'https://rsshub.feeded.xyz',
-    location: '🇺🇸',
-    maintainer: '胜之不易',
-    maintainerUrl: 'https://uneasy.win',
-  }, {
     url: 'https://hub.slarker.me',
     location: '🇺🇸',
     maintainer: 'Slarker',
     maintainerUrl: 'https://slarker.me',
   }, {
-    url: 'https://rsshub.liumingye.cn',
-    location: '🇭🇰',
-    maintainer: '刘明野',
-    maintainerUrl: 'https://www.liumingye.cn',
-  }, {
-    url: 'https://rsshub-instance.zeabur.app',
-    location: '🇺🇸',
-    maintainer: 'Zeabur',
-    maintainerUrl: 'https://zeabur.com',
-  }, {
-    url: 'https://rss.fatpandac.com',
-    location: '🇺🇸',
-    maintainer: 'Fatpandac',
-    maintainerUrl: 'https://fatpandac.com',
-  }, {
     url: 'https://rsshub.pseudoyu.com',
-    location: '🇺🇸',
+    location: '🇩🇪',
     maintainer: 'pseudoyu',
-    maintainerUrl: 'https://www.pseudoyu.com',
-  }, {
-    url: 'https://rsshub.atgw.io',
-    location: '🇺🇸',
-    maintainer: 'limfoo',
-    maintainerUrl: 'https://blog.limfoo.io',
+    maintainerUrl: 'https://github.com/pseudoyu',
   }, {
     url: 'https://rsshub.rss.tips',
     location: '🇺🇸',
     maintainer: 'AboutRSS',
     maintainerUrl: 'https://github.com/AboutRSS/ALL-about-RSS',
-  }, {
-    url: 'https://rsshub.mubibai.com',
-    location: '🇳🇱',
-    maintainer: 'Kai',
-    maintainerUrl: 'https://mubibai.com',
   }, {
     url: 'https://rsshub.ktachibana.party',
     location: '🇺🇸',
@@ -87,11 +57,6 @@ const instances = [{
     location: '🇩🇪',
     maintainer: 'untitaker',
     maintainerUrl: 'https://github.com/untitaker',
-  }, {
-    url: 'https://rsshub.aierliz.xyz',
-    location: '🇺🇸',
-    maintainer: '麦当狗',
-    maintainerUrl: 'https://t.me/rsshub/281479',
   }, {
     url: 'https://rss.owo.nz',
     location: '🇩🇪',
@@ -108,11 +73,6 @@ const instances = [{
     maintainer: '仰止',
     maintainerUrl: 'https://yangzhi.org',
   }, {
-    url: 'https://rsshub.viki.moe',
-    location: '🇺🇸',
-    maintainer: 'Viki',
-    maintainerUrl: 'https://github.com/vikiboss',
-  }, {
     url: 'https://rss.littlebaby.lol/rsshub',
     location: '🇺🇸',
     maintainer: 'yuanhong',
@@ -122,6 +82,41 @@ const instances = [{
     location: '🇬🇧',
     maintainer: 'HenryQW',
     maintainerUrl: 'https://github.com/HenryQW',
+  }, {
+    url: 'https://rsshub.speednet.icu',
+    location: '🇭🇰',
+    maintainer: 'freeintweb',
+    maintainerUrl: 'https://github.com/freeintweb',
+  }, {
+    url: 'https://holoxx.f5.si/',
+    location: '🇯🇵',
+    maintainer: 'Vania',
+    maintainerUrl: 'https://note.com/vania',
+  }, {
+    url: 'https://hub.rss.direct',
+    location: '🇸🇬',
+    maintainer: 'Eric Zhu',
+    maintainerUrl: 'https://github.com/ericyzhu',
+  }, {
+    url: 'https://rsshub.umzzz.com',
+    location: '🇭🇰',
+    maintainer: 'nesay',
+    maintainerUrl: 'https://umzzz.com',
+  }, {
+    url: 'https://rsshub.isrss.com',
+    location: '🇰🇷',
+    maintainer: 'isRSS',
+    maintainerUrl: 'https://isrss.com',
+  }, {
+    url: 'https://rsshub.thzu.xyz',
+    location: '🇭🇰',
+    maintainer: 'thzu',
+    maintainerUrl: 'https://thzu.xyz',
+  }, {
+    url: 'https://rsshub.email-once.com',
+    location: '🇭🇰',
+    maintainer: 'EmailOnce',
+    maintainerUrl: 'https://email-once.com'
   }
 ]
 

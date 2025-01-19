@@ -68,6 +68,20 @@ Access code is the md5 generated based on the access key + route, eg:
 
 -   Or using `key` directly, eg: `https://rsshub.app/qdaily/column/59?key=ILoveRSSHub`
 
+**Healthcheck Configuration**
+
+When `ACCESS_KEY` is enabled, the `healthcheck` endpoint also requires authentication.
+
+For a Docker Compose deployment, you'll need to update the `healthcheck` configuration in your `docker-compose.yml` to include the access key or access code parameter.
+
+The recommended configuration is:
+
+```diff
+healthcheck:
+-  test: ["CMD", "curl", "-f", "http://localhost:1200/healthz"]
++  test: ["CMD", "curl", "-f", "http://localhost:1200/healthz?key=${ACCESS_KEY}"]
+```
+
 ## Logging Configurations
 
 `DEBUG_INFO`: display route information on the homepage for debugging purposes. When set to neither `true` nor `false`, use parameter `debug` to enable display, eg: `https://rsshub.app/?debug=value_of_DEBUG_INFO` . Default to `true`
@@ -210,6 +224,10 @@ See docs of the specified route and `lib/config.ts` for detailed information.
 ### Civitai
 
 -   `CIVITAI_COOKIE`: Cookie of Civitai
+
+### Dianping
+
+-   `DIANPING_COOKIE`: 大众点评登录后的 Cookie 值，获取方式：访问 `https://m.dianping.com`，登录，输入 `document.cookie` 获取
 
 ### Discord
 
@@ -398,7 +416,7 @@ Remember to check `user-top-read` and `user-library-read` in the scope for `Pers
 [Bot application](https://telegram.org/blog/bot-revolution)
 
 -   `TELEGRAM_TOKEN`: Telegram bot token for stickerpack feeds
--   `TELEGRAM_SESSION`: for video and file streaming, can be acquired by running `node lib/routes/telegram/tglib/client.js`
+-   `TELEGRAM_SESSION`: for video, file streaming and some restricted channels, should create your telegram app via `https://my.telegram.org/apps`, get `api_id` and `api_hash` from there, then run `node ./lib/routes/telegram/scripts/get-telegram-session.mjs` in RSSHub root directory to get `TELEGRAM_SESSION`
 
 ### Twitter
 
@@ -406,6 +424,7 @@ It is recommended to use a non-important account, new accounts or logins from di
 
 -   `TWITTER_USERNAME`: Twitter username
 -   `TWITTER_PASSWORD`: Twitter password
+-   `TWITTER_PHONE_OR_EMAIL`: Optional, Twitter phone or email
 -   `TWITTER_AUTHENTICATION_SECRET`: Optional, Twitter Two-factor authentication -> Authentication app -> Secret part in `otpauth://totp/Twitter:@_RSSHub?secret=xxxxxxxxxxxxxxxx&issuer=Twitter`
 
 ### Wordpress

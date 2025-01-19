@@ -42,7 +42,7 @@ export const shared = defineConfig({
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
     ['script', {
-      src: 'https://umami.diygod.dev/script.js', 
+      src: 'https://umami.diygod.dev/script.js',
       'data-website-id': 'be1761be-7547-49d5-91b8-5c97c8f7cec7',
       defer: ''
     }]
@@ -74,7 +74,7 @@ export const shared = defineConfig({
         }
       }
     },
-  
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -82,14 +82,14 @@ export const shared = defineConfig({
       { text: 'Develop', link: '/joinus/' },
       { text: 'Deploy', link: '/deploy/' },
       { text: 'Ecosystem', link: '/ecosystem' },
-      { text: 'Sponsor', link: '/sponsor' },
+      { text: 'Contributors', link: '/contributors' },
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/DIYgod/RSSHub' },
       { icon: { svg: telegramLogo }, link: 'https://t.me/rsshub' },
       { icon: { svg: telegramLogo }, link: 'https://t.me/awesomeRSSHub' },
-      { icon: 'twitter', link: 'https://twitter.com/intent/follow?screen_name=_RSSHub' },
+      { icon: 'x', link: 'https://x.com/intent/follow?screen_name=_RSSHub' },
     ],
     editLink: {
       pattern: 'https://github.com/DIYgod/RSSHub-Docs/edit/main/src/:path',
@@ -98,7 +98,7 @@ export const shared = defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © 2018-${new Date().getFullYear()} DIYgod`
+      copyright: `© ${new Date().getFullYear()}. An <a href="https://open.network/" target="_blank">Open</a> project.`
     },
 
     sidebar: {
